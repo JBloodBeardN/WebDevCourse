@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms 2: Additional Inputs</title>
+</head>
+<body>
+    
+<form>
+    <label for="address">Address:</label>
+    <input type="text" maxlength="100" id="address" name="address" placeholder="Address">
+    <br />
+
+    <label for="postcode">Postcode:</label>
+    <input type="text" id="postcode" name="postcode" placeholder="Postcode">
+    <br />
+    
+    <label for="city">City:</label>
+    <input type="text" id="city" name="city" placeholder="City">
+
+    <p>Choose your preferred Shipping Method</p>
+    <label for="shippingOption">Shipping Options:</label>
+    <select id="shippingOption" name="shippingOption">
+        <option value="SuperSaver">Free Super Saver Shipping</option>
+        <option value="2Day">2-Day Shipping</option>
+        <option value="Express">Express Shipping</option>
+    </select>
+    
+    <p>Choose your Payment Method</p>
+    <label><input type="radio" name="payment" value="paypal">Paypal</label>
+    <br />
+    <label><input type="radio" name="payment" value="debit">Debit</label>
+    <br />
+    <label><input type="radio" name="payment" value="credit">Credit</label>
+    <br /><br />
+
+    <label for="comments">Order Comments:</label>
+    <textarea name="comments" id="comments" placeholder="Add a comment to your order..." rows="4" cols="40"></textarea>
+    <br /><br />
+
+    <label for="notificationSignup">Sign me up for promotional notifications</label>
+    <input type="checkbox" name="notificationSignup" id="notificationSignup" checked="checked">
+    <br />
+ 
+    <label for="paymentSave">Securely save my payment details</label>
+    <input type="checkbox" name="paymentSave" id="paymentSave">
+    <br /><br />
+
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
