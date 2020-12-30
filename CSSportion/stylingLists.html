@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling Lists</title>
+    <style>
+        ul.list1{
+            padding-left:0px;
+            list-style:none;
+        }
+        ul.list1 li{
+            position: relative;
+            padding-left:20px;
+        }
+        ul.list1 li:before{
+            /* list-style:lower-greek; */
+            /* list-style-image: url(../../images/GOPR3034.JPG); */
+            content:'';
+            width: 20px;
+            height:15px;
+            position:absolute;
+            background-image: url(../../images/GOPR3034.JPG);
+            background-size:cover;
+            background-position:center;
+            left:0;
+            top:50%;
+            transform: translateY(-50%);
+        }
+        ul.list2{
+            list-style:none;
+            padding: 0;
+            margin: 0;
+        }
+        ul.list2 li{
+            background-image: url(../../images/GOPR3034.JPG);
+            background-repeat:no-repeat;
+            padding-left: 30px;
+            background-size:20px 15px;
+            background-position:left center;
+        }
+
+
+    </style>
+</head>
+<body>
+    <p>A List of European Capitals:</p>
+        <ul class="list1">
+            <li>Paris</li>
+            <li>London</li>
+            <li>Madrid</li>
+        </ul>
+        <ul class="list2">
+            <li>Paris</li>
+            <li>London</li>
+            <li>Madrid</li>
+        </ul>
+</body>
+</html>

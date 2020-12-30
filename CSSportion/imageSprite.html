@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Sprite</title>
+    <style>
+        #image1{
+            width: 100px;
+            height: 100px;
+            opacity:0.4;
+            margin-right:10px;
+            position:absolute;
+            top: 30px;
+            left: 30px;
+            background: url(../../images/GOPR3034.JPG) 4000px 3000px;
+        }
+        #image2{
+            width: 350px;
+            height: 500px;
+            opacity:1;
+            margin-right:10px;
+            background: url(../../images/GOPR3034.JPG) -1800px -800px;
+        }
+        #image3{
+            width:100px;
+            height:100px;
+            opacity:0.7;
+            position: relative;
+            top: 0px;
+            left: -60px;
+            z-index: 1;
+            background: url(../../images/GOPR3034.JPG) -2000px -2000px
+        }
+    </style>
+</head>
+<body>
+    <img id="image1">
+    <img id="image2">
+    <img id="image3">
+</body>
+</html>
