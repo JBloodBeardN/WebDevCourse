@@ -1,0 +1,261 @@
+/*Shared Elements */
+body{
+  font: Arial, Helvetica, sans-serif;
+}
+#container{
+ width:80%;
+ height: auto;
+ /* border: 1px solid grey; */
+ margin:0px auto;
+ padding: 5px;
+}
+h1{
+color: red;
+}
+h1 a{
+  color:rgb(195, 0, 255);
+  text-decoration:none;
+  font-weight:lighter;
+  font-size: 1.3em;
+}
+
+header{
+  padding: 10px 0px;
+}
+.centeredDiv{
+  width:auto;
+  margin: 0 auto;
+}
+.floatNone{
+  float:none;
+  clear:both;
+}
+
+/*Brand and Search */
+
+#brand{
+  float:left;
+}
+#searchForm{
+  min-width:200px;
+  margin: 10px 0px;
+  float:right;
+  padding: 15px;
+  border: 1px solid grey;
+  background: linear-gradient( rgb(221, 248, 199), rgb(163, 231, 107));
+  background: -webkit-linear-gradient( rgb(221, 248, 199), rgb(163, 231, 107));
+  background: -o-linear-gradient( rgb(221, 248, 199), rgb(163, 231, 107));
+  background: -moz-linear-gradient( rgb(221, 248, 199), rgb(163, 231, 107));
+}
+.searchText{
+  float:left;
+  margin:0em 1em 0em 0em;
+  padding:0.4em;
+  color: orangered;
+  border: 1px solid gold;
+  background: white url(./images/searchIcon.png) right center no-repeat;
+}
+.searchText::placeholder{
+  color:orangered;
+}
+.submit{
+  float:right;
+  padding: 0.4em;
+  font-weight: bold;
+  color:white;
+  background-color:rgb(195, 0, 255);
+}
+ 
+/* nav menu */
+
+nav{
+  background: linear-gradient(gold, rgba(255, 217, 0, 0.534));
+  background: -moz-linear-gradient(gold, rgba(255, 217, 0, 0.534));
+  background: -webkit-linear-gradient(gold, rgba(255, 217, 0, 0.534));
+  background: -o-linear-gradient(gold, rgba(255, 217, 0, 0.534));
+}
+.menuList{
+  list-style: none;
+  padding:0px;
+}
+
+
+ul.menuList li a {
+  text-decoration:none;
+}
+.menuItem{
+  padding: 3px 35px;
+  margin: 15px 0px;
+  border-left: 1px solid black;
+  display:inline-block;
+  color: rgb(195, 0, 255);
+  text-transform:uppercase; 
+}
+.menuItem:hover {
+  padding: 1px 27px;
+  transition: all 1s;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  -ms-transition: all 1s;
+}
+.menuItem:hover a{
+  font-size: 1.1em;
+  color:magenta;
+  transition: all 1s;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  -ms-transition: all 1s;
+}
+.Home{
+  padding: 13px 37px 13px 17px;
+  margin:5px 0px 5px 20px;
+  display:inline-block;
+  font-weight:bold;
+  font-size:1.1em;
+  color: rgb(195, 0, 255);
+  text-transform:uppercase;
+  border: none;
+}
+.Home:hover a{
+  color: magenta;
+}
+#signup:hover{
+  padding: 1px 32px;
+  transition: all 1s;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  -ms-transition: all 1s;
+}
+#menu ul li a.active{
+  color:magenta;
+}
+
+/* Introduction Box */
+
+#introBox{
+  background: linear-gradient( rgb(221, 248, 199), rgb(163, 231, 107));
+  -webkit-background: linear-gradient( rgb(221, 248, 199), rgb(163, 231, 107));
+  -moz-background: linear-gradient( rgb(221, 248, 199), rgb(163, 231, 107));
+  -o-background: linear-gradient( rgb(221, 248, 199), rgb(163, 231, 107));
+  padding: 30px 20px;
+  line-height:1.1;
+  width:auto;
+  margin:auto;
+}
+#introBox h3{
+  font-size:2.5em;
+  padding:0px;
+  margin:10px 0px;
+  font-weight:normal;
+  color: rgb(106, 141, 49);
+}
+#introBox p{
+  color:  rgb(106, 141, 49);
+  font-size:1.1em;
+  text-align:justify;
+}
+
+/* Sidebars */
+
+#sidebarContainer{
+  width:80%;
+  margin:10px auto 0px auto;
+}
+.sidebar{
+/* display:inline-block; */
+width:42%;
+padding: 10px 20px;
+border:3px solid rgb(163, 231, 107);
+border-radius: 5%;
+align-items:center;
+min-height: 400PX;
+}
+
+.sidebar h2{
+  color:rgb(195, 0, 255);
+}
+.sidebar ul{
+  padding-top:.5em;
+}
+#goTo{
+  float:left;
+}
+#goTo ul li{
+  list-style-type:none;
+  padding:0px 0px 11px 0px;
+  position:relative;
+}
+#goTo ul li::before{
+  content:'';
+  position:absolute;
+  left:-27px;
+  top:-3px;
+  background-image: url(./images/LogoMakr-1burq1.png);
+  background-repeat:no-repeat;
+  /* background-color:black; */
+  background-position: center;
+  background-size:cover;
+  height:25px;
+  width:25px;
+  border:none;
+}
+#goTo ul li a{
+color:rgb(195, 0, 255);
+text-decoration: none;
+font-size:1.1em;
+}
+#goTo ul li:hover a, .sidebar ul li a:active{
+  font-size:1.2em;
+  color:magenta;
+  transition: all 1s;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  -ms-transition: all 1s;
+}
+#whyUs{
+  float:right;
+}
+
+#whyUs ul li{
+  list-style-type:none; 
+ background: url(./images/LogoMakr-36udUz.png) left center no-repeat;
+ padding: 10px 0 10px 50px;
+}
+
+/* Footer Content */
+
+.bottomLeftContent{
+  position:absolute;
+  left: 0;
+  bottom: 0;
+}
+.bottomLeftContent p{
+  padding: 0;
+  margin: 0 0 0 1em;
+}
+footer{
+  background-color:rgb(221, 248, 199);
+  color:rgb(195, 0, 255);
+  min-height:70px;
+  position:relative;
+  margin:30px 0;
+}
+footer ul{
+  float: right;
+  padding: 0;
+  padding-top: 1em;
+  padding-right: 2em;
+  margin: 0;
+}
+footer ul li{
+  color:black;
+  list-style-type:none;
+}
+footer ul li a{
+  text-decoration: none;
+  color:black
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internal css</title>
+    <style>
+        #facebook {
+         display:inline;
+        }
+        h1{
+            color:red
+        }
+        .bluebox{
+            background-color: #3A5795;
+            color:white;
+            height:100px;
+            width:auto;
+            overflow:hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        .bluebox:hover{
+            overflow: visible;
+        }
+        .yellowbox{
+            background-color: rgb(222, 224, 85);
+            height: 100px;
+            width: 400px;
+            /* word-break: break-all; */
+            /* word-break: keep-all; */
+            word-wrap: break-word;
+        }
+        .greenbox{
+            background-color: #31af37;
+            height:100px;
+            width:auto
+        }
+        #great{
+            background-color: #5a3479;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- <h1>Heading</h1> -->
+    <div class="bluebox">
+        <p id="facebook">Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook Facebook </p>
+    </div>
+    <div class="yellowbox">
+        <p>Apple Apple Apple Apple Apple looooooooooooooooooongApple Apple Apple Apple Apple Apple Apple Apple loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooongApple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple </p>
+    </div>
+    <div class="greenbox">
+        <p>Microsoft</p>
+    </div>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, voluptatem expedita dicta veritatis tempore alias molestias dolores eum aut rem accusamus ut odio voluptates est? Esse ipsa veritatis rem quaerat?</p>
+    <p>Second paragraph will have the same styling</p>
+</body>
+</html>
