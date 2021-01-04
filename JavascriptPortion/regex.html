@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Regex</title>
+</head>
+<body>
+
+  <p>String: <span id="string"></span></p>
+  <p>Pattern: <span id="pattern"></span></p>
+  <p>Search Results: <span id="search"></span></p>
+  <p>Match Results: <span id="match"></span></p>
+  <p>Test Results: <span id="test"></span></p>
+  
+  <script>
+    var str = "1Atl234anta4564"
+    // var iPattern = /[a-z]/i;
+    // var iPattern = /[a-z]/g;
+    // var iPattern = /[atz]/i;
+    // var iPattern = /[^atz]/i;
+    // var iPattern = /[4-7]/i;
+    // var iPattern = /\d/i;
+    // var iPattern = /\w/i;
+    // var iPattern = /\W/i;
+    // var iPattern = /\s/i;
+    // var iPattern = /\d{4}/i;
+    var iPattern = /^A/i;
+    // var iPattern = /\d{4}/i;
+    // var iPattern = /\d{4}/i;
+    // var iPattern = /\d{4}/i;
+    // var gPattern = new RegExp("a", "g");
+    document.getElementById("string").innerHTML = str;
+    document.getElementById("pattern").innerHTML = iPattern;
+    document.getElementById("search").innerHTML = str.search(iPattern);
+    document.getElementById("match").innerHTML = str.match(iPattern);
+    document.getElementById("test").innerHTML = iPattern.test(str);
+    
+
+    // window.alert(str.search(iPattern));
+    // window.alert(str.match(iPattern));
+    // window.alert(str.search(gPattern));
+    // window.alert(str.match(gPattern));
+
+  </script>
+  
+</body>
+</html>

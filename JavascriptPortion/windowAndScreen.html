@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Window and Screen</title>
+
+  <style>
+    #div1{
+      background-color:yellow;
+    }
+    #div2{
+      background-color:red;
+    }
+    #div3{
+      background-color:green;
+    }
+    #div4{
+      background-color: purple;
+    }
+    #div5{
+      background-color: blue;
+    }
+    .equalDiv{
+      float:left;
+      margin: 5px;
+    }
+    .clearFloat{
+      clear:both;
+    }
+    body{
+      margin:0;
+      padding:0;
+    }
+  </style>
+
+</head>
+<body>
+
+  <div class= "equalDiv" id="div1">Div 1</div>
+  <div class= "equalDiv" id="div2">Div 2</div>
+  <div class= "equalDiv" id="div3">Div 3</div>
+  <div class= "equalDiv" id="div4">Div 4</div>
+  <div class= "equalDiv" id="div5">Div 5</div>
+
+  <div class="clearFloat"><br /></div>
+  <div>Display Widths and Heights:</div>
+  <div>Avail Screen Height<span id="availScreenHeight"></span></div>
+  <div>Screen Height<span id="screenHeight"></span></div>
+  <div>Window Height<span id="windowHeight"></span></div>
+  <div>Avail Screen Width<span id="availScreenWidth"></span></div>
+  <div>Screen Width<span id="screenWidth"></span></div>
+  <div>Window Width<span id="windowWidth"></span></div>
+
+  <script>
+    // window height and width>> what the browser portion of the screen takes up
+    var windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+    var windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    
+
+    // size of the monitor (visual output) regardless of the size of the screen
+    var screenWidth = window.screen.width;
+    var screenHeight = window.screen.height;
+    var availableScreenHeight = window.screen.availHeight;
+    var availableScreenWidth = window.screen.availWidth
+
+    // window.alert(availableScreenHeight + ", " + windowHeight +", " +  screenHeight +", " + availableScreenWidht +", " + windowWidth + ", " + screenWidth);
+
+    document.getElementById("availScreenHeight").innerHTML = availableScreenHeight;
+    document.getElementById("screenHeight").innerHTML = screenHeight;
+    document.getElementById("availScreenWidth").innerHTML = availableScreenWidth;
+    document.getElementById("screenWidth").innerHTML = screenWidth;
+    document.getElementById("windowWidth").innerHTML = windowWidth;
+    document.getElementById("windowHeight").innerHTML = windowHeight;
+   
+    var equalDivs = document.getElementsByClassName("equalDiv");
+
+    for(i=0; i<equalDivs.length; i++){
+      equalDivs[i].style.width = (windowWidth/equalDivs.length)-10 + "px";
+      equalDivs[i].style.height = (windowHeight/equalDivs.length)-10 + "px";
+    }
+  
+   
+    
+    
+    // document.getElementsByClassName("equalDiv").style.width = windowWidth/4-10 + "px";
+    // document.getElementsByClassName("equalDiv").style.height = windowHeight/4-10 + "px";
+  </script>
+  
+</body>
+</html>

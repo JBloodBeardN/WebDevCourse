@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alert Boxes</title>
+</head>
+<body>
+  
+  <p id="myParagraph">Javascript</p>
+
+  <script>
+    var acceptCookies = window.confirm("Our site uses cookies for optimal performance. Not accepting cookies may have adverse affects on the functionality of the site. Do you accept the use of Cookies for functionality?");
+    if (acceptCookies == true){
+      window.alert("Cookies accepted.");
+    }else{
+      window.alert("You are being redirected");
+      window.location.assign("https://www.cnn.com");
+    }
+
+    var visitor = window.prompt("Please enter your name.");
+    document.getElementById("myParagraph").innerHTML = "<p> Hello, " + visitor + "</p>";
+  </script>
+
+</body>
+</html>

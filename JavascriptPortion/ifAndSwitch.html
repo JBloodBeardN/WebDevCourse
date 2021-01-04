@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>If and Switch Statements</title>
+</head>
+<body>
+  <p>Speed on the motorway:<input id="speedInput" type="number"/><button onclick="compareSpeed()">Check</button></p>
+  <p>Your season:<select required id="seasonInput">
+
+  <option value="" disabled selected hidden>Select a Season</option>
+  <option value="Summer">Summer</option>  
+  <option value="Spring">Spring</option>  
+  <option value="Winter">Winter</option>  
+  <option value="Fall">Fall</option>
+  </select>
+  <button onclick="checkSeason()">Submit</button></p>
+ 
+
+<script>
+
+
+  function checkSpeed(speed){
+    if(speed > 70){
+      window.alert("You are going to fast!");
+    }else if(speed < 45){
+      window.alert("You are going too slow!")
+    }else{
+      window.alert("Your speed is fine.");
+    }
+  }
+
+  function compareSpeed(){
+  var speed = document.getElementById("speedInput").value;
+  checkSpeed(speed);
+}
+function checkSeason(){
+  var season = document.getElementById("seasonInput").value;
+  switch (season){
+    case "Summer":
+      window.alert("Time for sipping in those sun rays!");
+      break;
+    case "Spring": 
+      window.alert("April showers bring May flowers.");
+      break;
+    case "Winter": 
+      window.alert("Put a log on the fire and grab a blanket.");
+      break;
+    case "Fall":
+      window.alert("Red leaves and pumpkin spice.")
+      break;
+    default:
+      window.alert("You must select a season");
+  }
+}
+</script>
+
+</body>
+</html>

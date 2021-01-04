@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrays</title>
+</head>
+<body>
+  <p id="myParagraph">Javascript</p>
+  <script>
+    var shoppingList = ["bread", "eggs", "milk", "biscuits"];
+    // document.getElementById("myParagraph").innerHTML += "<br />" + shoppingList[0];
+
+    showResults(shoppingList);
+    
+//deletes without deleting index
+    delete shoppingList[0];
+    showResults(shoppingList);
+
+    //reseting a value to remove undefined
+    shoppingList[0] = "yogurt"
+    showResults(shoppingList);
+
+    //removes value and index at position 1 (list item 2)    
+    shoppingList.splice(1,1);
+    showResults(shoppingList);
+    showResults(shoppingList[1]);
+
+    //does not remove anything but injects at a certain place in index>>shifting all remaining items
+    shoppingList.splice(1,0,"banana", "apple");
+    showResults(shoppingList);
+
+    shoppingList.reverse(shoppingList.sort())
+    showResults(shoppingList);
+
+    var myString = "what is the weather like?";
+    var myArray = myString.split(" ");
+    showResults(myArray);
+
+
+    function showResults(x){
+      document.getElementById("myParagraph").innerHTML += "<br />" + x;
+
+    }
+    // var groceryList = new Array("bread", "eggs", "milk");
+
+  </script>
+</body>
+</html>
