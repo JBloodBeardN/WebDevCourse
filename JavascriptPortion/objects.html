@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objects</title>
+  <!-- <script type="text/Javascript" src="./alert.js"></script> -->
+  </head>
+<body>
+  <p>Javascript</p>
+  <script type="text/Javascript">
+  document.addEventListener('DOMContentLoaded', () => {
+
+    var myPhone = new Object();
+    myPhone.make = "Samsung";
+    myPhone.model = "S9+";
+    myPhone.warranty = 12;
+    myPhone.color = "Lilac";
+    
+    function Phone(make, model, warranty, color){
+      this.make = make;
+      this.model = model;
+      this.warranty = warranty;
+      this.color = color;
+      this.extendWarranty = function(x){
+        this.warranty = this.warranty+x;
+      }
+    }
+
+    var constructedPhone = new Phone ("Samsung","S9+", 12, "Lilac");
+    
+    function addCondition(phoneObject, condition){
+      phoneObject.condition = condition;
+      window.console.log(phoneObject);
+      return phoneObject;
+    }
+    
+
+    // window.console.log(constructedPhone);
+
+    constructedPhone.extendWarranty(4);
+
+    function refurbish(phoneObject){
+      phoneObject.condition = "like new";
+      window.console.log(phoneObject);
+    }
+    refurbish(addCondition(constructedPhone, "used"));
+    
+    // window.console.log(constructedPhone);
+
+    Phone.prototype.condition = "new";
+    var brothersPhone = new Phone("Samsung", "S20", 0, "Black");
+    brothersPhone.extendWarranty(4);
+    window.console.log(brothersPhone);
+
+  });
+   
+
+  </script>
+</body>
+</html>

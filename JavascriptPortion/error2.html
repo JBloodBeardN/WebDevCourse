@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Error</title>
+  <style>
+    .error{
+      color:red;
+      font-size: 0.7em;
+      margin:0;
+      padding:0;
+    }
+    #passwordBlock{
+      padding-bottom:0;
+      margin-bottom:0;
+    }
+  </style>
+</head>
+<body>
+
+  <p>Your Password should contain at least 6 characters, 1 number and 1 capital letter:</p>
+  <p id="passwordBlock">Enter Password <br /> <input id="password" type="password"></p>
+  <p id="passwordError" class="error">&nbsp;</p>
+  <p>Re-enter Password <br /> <input id="password2" type="password"></p>
+  <button onclick="check()">Submit</button>
+    
+
+  <script>
+    function check(){
+      var password = document.getElementById("password").value;
+      var password2 = document.getElementById("password2").value;
+      var errorMessage = document.getElementById("passwordError");
+      var errorToThrow = "";
+      if(password === password2){
+        try{
+          if(password.length<6){
+            errorToThrow = "Password must be longer than 6 characters."
+          }
+          if((/[A-Z]/g).test(password) == false){
+            errorToThrow += "<br /> Password must contain one Capital letter."
+          }
+          if((/\d/g).test(password) == false){
+            errorToThrow += "<br /> Password must contain one number."
+          }
+          throw errorToThrow;
+        }catch(error){
+          errorMessage.innerHTML = error;
+        }
+        
+      }else{
+        window.alert("The Passwords must be the same");
+      }
+    }
+  </script>
+</body>
+</html>

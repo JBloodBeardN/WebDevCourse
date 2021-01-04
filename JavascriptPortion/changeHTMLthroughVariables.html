@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change HTML through Variables</title>
+    <style>
+        /*p{
+            color:green;
+            font-size:300%
+        } */
+        h1{
+            color:red
+        }
+        .bluebox{
+            background-color: #3A5795;
+            color:white;
+            height:100px;
+            width:auto
+        }
+        .yellowbox{
+            background-color: rgb(222, 224, 85);
+            height: 100px;
+            width: auto
+        }
+        .greenbox{
+            background-color: #31af37;
+            height:100px;
+            width:auto
+        }
+        #great{
+            background-color: #5a3479;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Heading</h1>
+    <div id="facebook" class="bluebox">
+        <p>Facebook is <span id="great">great</span></p>
+    </div>
+    <div id="apple" class="yellowbox">
+        <p>Apple</p>
+    </div>
+    <div id="microsoft" class="greenbox">
+        <p>Microsoft</p>
+    </div>
+    <button id="changeFacebook">Change Facebook</button>
+    <button id="changeApple">Change Apple</button>
+    <button id="changeMicrosoft">Change Microsoft</button>
+
+    <script>
+      let color = "";
+      let x = Math.round(Math.random()*255+1);
+      let y = Math.round(Math.random()*255+1);
+      let z = Math.round(Math.random()*255+1);
+      color = "rgb(" + x + "," + y + "," + z + ")";
+      let text = "<p> New Div </p>";
+      
+      document.getElementById("changeFacebook").onclick = function(){
+        let content = document.getElementById("facebook").innerHTML;
+        let newColor = window.getComputedStyle(document.getElementById("facebook")).getPropertyValue("background-color");
+        // alert(document.getElementById("facebook").style.backgroundColor);
+        document.getElementById("facebook").style.backgroundColor = color;
+        document.getElementById("facebook").innerHTML = text;
+        text = content;
+        color = newColor;
+        // console.log(newColor);
+      }
+      document.getElementById("changeApple").onclick = function(){
+        let content = document.getElementById("apple").innerHTML;
+        let newColor = window.getComputedStyle(document.getElementById("apple")).getPropertyValue("background-color");
+        document.getElementById("apple").style.backgroundColor = color;
+        document.getElementById("apple").innerHTML = text;
+        color = newColor;
+        text = content;
+        // console.log(newColor);
+      }
+      document.getElementById("changeMicrosoft").onclick = function(){
+        let content = document.getElementById("microsoft").innerHTML;
+        let newColor = window.getComputedStyle(document.getElementById("microsoft")).getPropertyValue("background-color");
+        document.getElementById("microsoft").style.backgroundColor = color;
+        document.getElementById("microsoft").innerHTML = text;
+        color = newColor;
+        text = content;
+      }
+    </script>
+  </body>
+</html>

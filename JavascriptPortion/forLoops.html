@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Loops</title>
+</head>
+<body>
+  <p id="myParagraph">My Paragraph</p>
+  <script>
+
+    for (i=0; i<5; i++){
+    document.getElementById("myParagraph").innerHTML += "<br />" + i;
+    }
+    for (i=7; i>0; i--){
+    document.getElementById("myParagraph").innerHTML += "<br />" + Math.pow(i,2);
+    }
+  
+    var shoppingList = ["bread", "milk", "eggs"];
+    for(i=0; i<shoppingList.length; i++){
+      document.getElementById("myParagraph").innerHTML += "<br />" + shoppingList[i];
+    }
+
+    for (item in shoppingList){
+      document.getElementById("myParagraph").innerHTML += "<br />" + shoppingList[item];
+    }
+  
+    
+  </script>
+
+  
+  
+</body>
+</html>

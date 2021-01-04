@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>While Loops</title>
+</head>
+<body>
+  <p id="myParagraph">My Paragraph</p>
+  <p id= "balanceParagraph">Current Balance is <span id="balance">$1000</span></p>
+  <button value = "100" onclick="buyItem(this.value)">$100</button>
+  <button value = "300" onclick="buyItem(this.value)">$300</button>
+  <button value = "250" onclick="buyItem(this.value)">$250</button>
+  <button onclick="autoBuy()">AutoBuy</button>
+
+  <script>
+    var i=0;
+    while(i<5){
+      document.getElementById("myParagraph").innerHTML += "<br />" + i;
+      i++
+    }
+
+    var balance = 1000;
+    var itemsBought = 0;
+    function buyItem(value){
+      while(balance >= +value){
+        balance -= +value;
+        console.log(balance);
+        itemsBought += +value;
+        console.log(itemsBought);
+        return (document.getElementById("balance").innerHTML = "$" + balance);
+      }
+      window.alert("You are out of Money. Get a job, you bum!")
+    }
+    
+    function autoBuy(){
+      while(balance>0){
+        var itemPrice = Math.floor(Math.random()*100);
+        if(itemPrice <= balance){
+          itemsBought++;
+          balance -= itemPrice;
+          document.getElementById("balanceParagraph").innerHTML += "<br />Purchase Amount $" + itemPrice + "<br /> Current Balance is $" + balance;
+        }
+      }
+    }
+  </script>
+
+</body>
+</html>

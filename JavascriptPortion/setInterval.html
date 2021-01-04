@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Set Intervals</title>
+</head>
+<body>
+<p id="counter">0</p>
+<button id="stopCounter" onClick="stopCounter(myCounter)">Stop Counter</button>
+<button id="restartCounter" onClick="startCounter()">Restart Counter</button>
+
+<button onclick="clearTimeout(delayedWelcomeMessage)">Avoid Welcome Message</button>
+ <script>
+   //initialize x as a number
+   var x = 0;
+   
+   //set counter to be the counter paragraph
+   var counter = document.getElementById("counter");
+ 
+    //
+    var myCounter;
+    function startCounter() { myCounter = setInterval(
+      function(){x++;counter.innerHTML = x},
+      1000);
+    }
+    
+    startCounter();
+
+    function stopCounter(counter) {
+      clearInterval(counter);
+    }
+
+    function restartCounter() {
+      x = +counter.innerHTML;
+      startCounter();
+    }
+
+    var delayedWelcomeMessage = setTimeout(function(){
+      window.alert("Welcome to the Page!")
+    }, 3000);
+
+   </script> 
+  
+</body>
+</html>

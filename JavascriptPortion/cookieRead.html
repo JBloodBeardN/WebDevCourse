@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cookie Read</title>
+</head>
+<body>
+  <p>Your name: <span id="username"></span><br />
+  Your age: <span id="age"></span><br />
+  Your country: <span id="country"></span></p>
+  
+  <script>
+
+    var cookie = document.cookie;
+    cookie = cookie.replace(/\s/gi,"");
+    cookie = cookie.split(";");
+    window.console.log(cookie);
+    for (i=0; i<cookie.length; i++){
+      try{
+        var singleCookie = cookie[i].split("=");
+        window.console.log(singleCookie);
+        document.getElementById(singleCookie[0]).innerHTML = singleCookie[1];
+      }
+      catch(err){
+        console.log(err);
+      }
+    }
+
+  </script>
+</body>
+</html>
